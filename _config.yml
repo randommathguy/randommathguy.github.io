@@ -1,10 +1,11 @@
 # --- General options --- #
 # bundle exec jekyll serve
 # Name of website
-title: Home
+title: Aryaman
+tagline: I didn't exist
 
 # Short description of your site
-description: math boi
+description: Click on the links to explore!
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
