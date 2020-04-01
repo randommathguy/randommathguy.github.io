@@ -321,7 +321,7 @@ footer .theme-by {
 .intro-header.big-img  .big-img-transition {
   position: absolute;
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
   opacity: 0;
   background: no-repeat center center;
   -webkit-background-size: cover;
@@ -789,12 +789,14 @@ A.blog-button:active {text-decoration: none; color: white;}
 /* Style and "hide" the sidebar */
 .sidebar {
   position: fixed;
+  height: 100%;
   top: 0;
   bottom: 0;
   left: -28rem;
   width: 28rem;
   visibility: hidden;
-  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
   color: rgba(255,255,255,.6);
@@ -812,9 +814,14 @@ A.blog-button:active {text-decoration: none; color: white;}
 .sidebar a {
   font-weight: normal;
   color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 .sidebar-item {
-  padding: 1rem;
+  padding: -2rem 1rem;
+  font-size: 0.8em;
 }
 .sidebar-item p:last-child {
   margin-bottom: 0;
@@ -822,13 +829,68 @@ A.blog-button:active {text-decoration: none; color: white;}
 
 /* Sidebar nav */
 .sidebar-nav {
+  position: fixed;
+  background-color: #202020;
+  height: 100%;
+  font-weight: 400;
+  font-size: 1.2em;
+  overflow: auto;
+  /*padding-bottom: 6em;*/
+  z-index: 9;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
-
+.sidebar-nav ul {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-nav ul li {
+  margin-left: 0;
+  padding-left: 0;
+  display: inline-block;
+  width: 100%;
+  /* -------------
+  Sidebar: icons
+  ----------------*/
+}
+.sidebar-nav ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.75em;
+  padding: 0.75em 0.5em;
+  position: relative;
+  display: block;
+}
+.sidebar-nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.sidebar-nav ul li i {
+  font-size: 1.8em;
+  padding-right: 0.5em;
+  width: 19em;
+  display: inline;
+  vertical-align: middle;
+}
+.sidebar-nav > ul > li > a:after {
+  content: '\f125';
+  font-family: ionicons;
+  font-size: 0.5em;
+  width: 10px;
+  color: #fff;
+  position: absolute;
+  right: 0.75em;
+  top: 45%;
+}
 .sidebar-nav-item {
   display: block;
   padding: 1rem 2rem; /* height width */
   border-top: 1px solid rgba(255,255,255,.1);
+  font-size: 0.7em;
 }
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
@@ -836,11 +898,14 @@ a.sidebar-nav-item:focus {
   text-decoration: none;
   background-color: rgba(255,255,255,.1);
   border-color: transparent;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
 @media (min-width: 48em) {
   .sidebar-item {
-    padding: 1.5rem;
+    padding: -2rem 1rem;
   }
   .sidebar-nav-item {
     padding-left:  4rem;
@@ -965,41 +1030,49 @@ a.sidebar-nav-item:focus {
 }
 
 
-
-/* Slide effect
- *
- * Handle the sliding effects of the sidebar and content in one spot, seperate
- * from the default styles.
- *
- * As an a heads up, we don't use `transform: translate3d()` here because when
- * mixed with `position: fixed;` for the sidebar toggle, it creates a new
- * containing block. Put simply, the fixed sidebar toggle behaves like
- * `position: absolute;` when transformed.
- *
- * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
- */
-
-.wrap,
-.sidebar,
-.sidebar-toggle {
-  -webkit-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-          backface-visibility: hidden;
+/*-------------
+Flyout
+-------------*/
+.sidebar-nav .nav-flyout {
+  position: absolute;
+  background-color: #080D11;
+  z-index: 19;
+  left: 1.7em;
+  right: 0em;
+  top: 0;
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-.wrap,
-.sidebar-toggle {
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-          transition: transform .3s ease-in-out;
+.sidebar-nav .nav-flyout a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.sidebar-nav ul > li:hover .nav-flyout {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-#sidebar-checkbox:checked + .sidebar {
-  z-index: 10;
-  visibility: visible;
+
+.sidebar .avatar {
+  padding: 0em 0em;
+  text-align: center;
 }
-#sidebar-checkbox:checked ~ .sidebar,
-#sidebar-checkbox:checked ~ .wrap,
-#sidebar-checkbox:checked ~ .sidebar-toggle {
-  -webkit-transform: translateX(28rem);
-      -ms-transform: translateX(28rem);
-          transform: translateX(28rem);
+.sidebar .avatar img {
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #ffea92;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
 }

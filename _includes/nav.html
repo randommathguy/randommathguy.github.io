@@ -4,36 +4,38 @@
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <p>{{ site.description }}</p>
-  </div>
-
+ 
+  <header class="avatar">
+    <img src="https://aryamanmaithani.github.io/img/self.jpg" />
+    <h4>math boi</h4>
+  </header>
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
-
-    {% for link in site.navbar-links %}
-      {% if link[1].first %}
-        <li class="navlinks-container">
-          <a class="navlinks-parent" href="javascript:void(0)">{{ link[0] }}</a>
-          <div class="navlinks-children">
-            {% for childlink in link[1] %}
-              {% for linkparts in childlink %}
-                {% include navbarlink.html link=linkparts %}
-              {% endfor %}
-            {% endfor %}
-          </div>
-        </li>
-      {% else %}
-        {% include navbarlink.html link=link %}    
-      {% endif %}
-    {% endfor %}
-
+    <ul>
+      {% for nav in site.navbar-links %}
+          {% if nav.subcategories %}
+            <li>
+              <a class="sidebar-nav-item" href="#"><i class="ion-ios-more"></i> <span class="">{{ nav.title }}</span></a>
+              <ul class="nav-flyout">
+                {% for subcategory in nav.subcategories %}
+                <li>
+                    <a href="{{ subcategory.href | relative_url }}"><i class="ion-record"></i> <span class="">{{ subcategory.title }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% else %}
+            <li>
+              <a class="sidebar-nav-item{% if page.url == linkurl %} active{% endif %}" href="{{ nav.href | relative_url }}"><i class="ion-ios-more-outline"></i> <span class="">{{ nav.title }}</span></a>    
+            </li>
+          {% endif %}
+        {% endfor %}
+        
+      </ul>
     <span class="sidebar-nav-item">Currently v3.14</span>
-  </nav>
-
-  <div class="sidebar-item">
+  <div class="sidebar-nav-item">
     <p>
       &copy; {{ site.time | date: '%Y' }}. All lefts reversed.
     </p>
   </div>
+  </nav>
 </div>
