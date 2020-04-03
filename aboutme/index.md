@@ -2,7 +2,7 @@
 layout: page
 title: About me
 subtitle: Aryaman Maithani
-image: img/self.jpg
+image: img/about.jpg
 ---
 
 Hello! My name is Aryaman Maithani.  

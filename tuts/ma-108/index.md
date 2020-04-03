@@ -10,7 +10,7 @@ image: /img/ma-108.png
 The tutorials can be found [here](http://www.math.iitb.ac.in/~preeti/ma108-2019/root_2016.pdf). 
 
 # Assignments
-* Week 1: [Questions](https://github.com/aryamanmaithani/ma-108-tut/blob/master/Assignments/week-1.pdf) | [Solutions](https://github.com/aryamanmaithani/ma-108-tut/blob/master/Assignments/solutions-1.pdf)
+* Week 1: [Questions](https://github.com/aryamanmaithani/ma-108-tut/blob/master/Assignments/week-1.pdf) \| [Solutions](https://github.com/aryamanmaithani/ma-108-tut/blob/master/Assignments/solutions-1.pdf)
 
 If you'ren't from my tutorial, don't get scared upon seeing this. This is just something I'm doing for my tutorial. Nothing graded.
 

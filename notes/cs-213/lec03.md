@@ -2,7 +2,6 @@
 layout: page
 title: CS 213
 subtitle: Lecture 3
-image:
 ---
 # Analyse Code
 
