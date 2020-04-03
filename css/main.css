@@ -11,7 +11,7 @@ body {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
   font-size: 18px;
   color: white;/*#404040;*/
-  position: relative;
+  /*position: relative;*/
   background-color: {{ site.page-col }};
   {% if site.page-img %}
   background-image: url({{ site.page-img | relative_url }});
@@ -20,7 +20,7 @@ body {
 }
 p {
   line-height: 1.5;
-  margin: 30px 0;
+  margin: 30px -10px;
 }
 h1,h2,h3,h4,h5,h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
