@@ -11,7 +11,7 @@ body {
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
   font-size: 18px;
   color: white;/*#404040;*/
-  /*position: absolute;*/
+  position: absolute;
   background-color: {{ site.page-col }};
   {% if site.page-img %}
   background-image: url({{ site.page-img | relative_url }});
@@ -744,7 +744,7 @@ A.blog-button:active {text-decoration: none; color: white;}
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
-  border-bottom: 1px solid #111;
+  /*border-bottom: 1px solid #111;*/
 }
 .masthead-title {
   margin-top: 0;
