@@ -1,0 +1,24 @@
+- title: Home
+  href:  /
+
+- title: Academic
+  subcategories:
+  - title: Notes
+    href:  /notes/
+  - title: Presentations
+    href:  /presentations/
+  - title: Reports
+    href:  /reports/
+
+- title: Tutorials
+  href: /tuts/
+  subcategories:
+  - title: MA 105
+    href:  /tuts/ma-105
+  - title: MA 106
+    href:  /tuts/ma-106
+  - title: MA 108
+    href:  /tuts/ma-108
+
+- title: About Me
+  href:  /aboutme/
