@@ -9,7 +9,7 @@ layout: null
 body {
   overflow-x: hidden;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
-  font-size: 20px;
+  font-size: 18px;
   color: white;/*#404040;*/
   position: relative;
   background-color: {{ site.page-col }};
