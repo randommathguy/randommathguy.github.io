@@ -17,6 +17,10 @@ layout: null
     --subtitle-color: {{ site.subtitle-col }};
     --masthead-color: #c0c0c0;
     --masthead-small-color: #707070;
+    --post-preview-border-color: #eee;
+    --blockquote-color: #808080;
+    --blockquote-bg-color: #404040;
+    --blockquote-border-color: #fff;
 }
 
 [data-theme="dark"] {
@@ -29,7 +33,11 @@ layout: null
     --title-color: {{ site.light-title-col }};
     --subtitle-color: {{ site.light-subtitle-col }};
     --masthead-color: #3F3F3F;
-    --masthead-small-color: #8F8F8F;    
+    --masthead-small-color: #8F8F8F;
+    --post-preview-border-color: #111;
+    --blockquote-color: #7F7F7F; 
+    --blockquote-bg-color: #BFBFBF;
+    --blockquote-border-color: #000;
 }
 
 
@@ -61,8 +69,11 @@ a:focus {
   color: var(--hover-color);
 }
 blockquote {
-  color: #808080;
+  color: var(--blockquote-color);
   font-style: italic;
+  border-left: 5px solid var(--blockquote-border-color);
+  border-radius: 5px 10px 10px 5px;
+  background-color: var(--blockquote-bg-color);
 }
 blockquote p:first-child {
   margin-top: 0;
@@ -184,7 +195,7 @@ footer .theme-by {
 
 .post-preview {
   padding: 20px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--post-preview-border-color);
 }
 
 @media only screen and (min-width: 768px) {
@@ -199,7 +210,7 @@ footer .theme-by {
 
 .post-preview a {
   text-decoration: none;
-  color: #F5F5F5; /*#404040;*/
+  color: var(--font-color);
 }
 
 .post-preview a:focus,
@@ -967,10 +978,10 @@ a.sidebar-nav-item:focus {
   width: 1rem;
   height: 1.5rem;
   content: "";
-  background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-  background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-  background-image:     -ms-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-  background-image:         linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
+  background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, var(--background-color) 20%, var(--background-color) 40%, #555 40%, #555 60%, var(--background-color) 60%, var(--background-color) 80%, #555 80%, #555 100%);
+  background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, var(--background-color) 20%, var(--background-color) 40%, #555 40%, #555 60%, var(--background-color) 60%, var(--background-color) 80%, #555 80%, #555 100%);
+  background-image:     -ms-linear-gradient(to bottom, #555, #555 20%, var(--background-color) 20%, var(--background-color) 40%, #555 40%, #555 60%, var(--background-color) 60%, var(--background-color) 80%, #555 80%, #555 100%);
+  background-image:         linear-gradient(to bottom, #555, #555 20%, var(--background-color) 20%, var(--background-color) 40%, #555 40%, #555 60%, var(--background-color) 60%, var(--background-color) 80%, #555 80%, #555 100%);
 }
 
 .sidebar-toggle:active,
