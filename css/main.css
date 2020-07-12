@@ -7,6 +7,7 @@ layout: null
 /* --- General --- */
 
 :root {
+    --current-theme: "dark";
     --font-color: {{ site.font-col }};
     --background-color: {{ site.page-col }};
     --footer-color: {{ site.footer-col }};
@@ -23,7 +24,9 @@ layout: null
     --blockquote-border-color: #fff;
 }
 
+/*dark is used because I ripped this off, these following setting are for LIGHT mode*/
 [data-theme="dark"] {
+    --current-theme: "light";
     --font-color: {{ site.light-font-col }};
     --background-color: {{ site.light-page-col }};
     --footer-color: {{ site.light-footer-col }};
