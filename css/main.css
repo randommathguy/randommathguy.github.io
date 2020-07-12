@@ -1119,9 +1119,9 @@ Flyout
 }
 .theme-switch {
   display: inline-block;
-  height: 34px;
+  height: 26px;
   position: relative;
-  width: 60px;
+  width: 54px;
 }
 
 .theme-switch input {
@@ -1129,7 +1129,6 @@ Flyout
 }
 
 .slider {
-  background-color: #ccc;
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -1137,25 +1136,27 @@ Flyout
   right: 0;
   top: 0;
   transition: .4s;
+  background-color: {{ site.light-page-col }};
 }
 
 .slider:before {
-  background-color: #fff;
-  bottom: 4px;
+  bottom: 3px;
   content: "";
-  height: 26px;
+  height: 20px;
   left: 4px;
   position: absolute;
   transition: .4s;
-  width: 26px;
+  width: 20px;
+  background-color: {{ site.page-col }};
 }
 
 input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: {{ site.page-col }};
 }
 
 input:checked + .slider:before {
   transform: translateX(26px);
+  background-color: {{ site.light-page-col }};
 }
 
 .slider.round {
