@@ -56,10 +56,10 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="{{ include.type }}-heading">
           <h1 style="color: var(--title-color)">
-          	{% if page.image %}
-				<div class = "header-image" id = "header-image">
+			<div id = "header-image">
+				<div class = "header-image">
 				</div>
-		  	{% endif %}
+			</div>
           	{% if page.title %}{{ page.title }}{% else %}<br/>{% endif %}
           </h1>
 		  {% if page.subtitle %}
@@ -95,10 +95,10 @@
     document.documentElement.setAttribute('data-theme', currentTheme);
     if (currentTheme === 'dark') {
           toggleSwitch.checked = true;
-          document.getElementById("header-image").innerHTML = "{% if page.light-image %} <img src=\"{{ page.light-image | relative_url }}\"> {% else %} <img src=\"{{ page.image | relative_url }}\"> {% endif %}";
+          document.getElementById("header-image").innerHTML = "{% if page.light-image %} <div class = \"header-image\"><img src=\"{{ page.light-image | relative_url }}\"></div> {% elsif page.image %} <div class = \"header-image\"><img src=\"{{ page.image | relative_url }}\"></div> {% endif %}";
       }
     else {
-    	document.getElementById("header-image").innerHTML = "<img src=\"{{ page.image | relative_url }}\">";
+    	document.getElementById("header-image").innerHTML = "{% if page.light-image %} <div class = \"header-image\"><img src=\"{{ page.image | relative_url }}\"></div> {% endif %}";
     }
   }
 
@@ -106,12 +106,12 @@
       if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        document.getElementById("header-image").innerHTML = "{% if page.light-image %} <img src=\"{{ page.light-image | relative_url }}\"> {% else %} <img src=\"{{ page.image | relative_url }}\"> {% endif %}";
+        document.getElementById("header-image").innerHTML = "{% if page.light-image %} <div class = \"header-image\"><img src=\"{{ page.light-image | relative_url }}\"></div> {% elsif page.image %} <div class = \"header-image\"><img src=\"{{ page.image | relative_url }}\"></div> {% endif %}";
       }
       else {        
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
-        document.getElementById("header-image").innerHTML = "<img src=\"{{ page.image | relative_url }}\">";
+        document.getElementById("header-image").innerHTML = "{% if page.light-image %} <div class = \"header-image\"><img src=\"{{ page.image | relative_url }}\"></div> {% endif %}";
       }    
   }
 
