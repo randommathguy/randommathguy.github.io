@@ -1,7 +1,8 @@
 ---
 layout: page
-title: 'CS 213'
+title: CS 213
 subtitle: Lecture 4
+image:
 ---
 # Writing programs
 * Choosing appropriate data types → min memory, can store all values required  

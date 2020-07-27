@@ -2,7 +2,6 @@
 layout: page
 title: HS 200
 subtitle: Module 1 - Economic Aspect
-image:
 ---
 ## Lecture 1 (2nd March 2020)
 * In ES 200, we were introduced to the ecological and health aspects.
@@ -226,4 +225,4 @@ Next class: A bit of game theory.
                   → NC, NP: 2
                   → C, NP: 1
                 - Is there a first mover's advantage or last? Draw a game tree!
-                    + See the [pic](/notes/hs-200/movers-tree.png)
+                    + See the [pic](/notes/hs-200/movers-advantage.png)

@@ -1,0 +1,177 @@
+---
+layout: page
+title: Quiz
+subtitle: Freshie course
+image: /img/iitb.png
+---
+<!-- Hello, source code reader! -->
+<HTML>
+<HEAD>
+<STYLE type="text/css">
+    TD.question { background-color: #000000 }
+    .button {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 15px 80px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      border-radius: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .button:hover {
+      background-color: #0085A1;
+      color: white;
+    }
+</STYLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function process()
+{
+    var ma_105 = 0;
+    var ma_106 = 0;
+    var ma_108 = 0;
+    var ph_107 = 0;
+    var ph_108 = 0;
+    var ch_105 = 0;
+    var ch_107 = 0;
+    var ch_117 = 0;
+    var ph_107 = 0;
+    var me_113 = 0;
+    var me_119 = 0;
+    var cs_101 = 0;
+    var bb_101 = 0;
+    var nso = 0;
+    var nss = 0;
+    var ncc = 0;
+
+    var f = document.f;
+    var i = 0;
+    var count = 0;
+
+    for (i = 0; i < f.forest.length; i++) if (f.forest[i].checked) {value = f.forest[i].value; count++;}
+    if (value == "1") { ma_108++; ph_107++; ch_105++; ph_107++; me_113++; cs_101++; nso++; ncc++; }
+    if (value == "2") { ma_108++; ph_107++; ch_105++; ph_107++; me_113++; cs_101++; nso++; ncc++; }
+    if (value == "3") { ma_105++; ma_106++; ph_108++; ch_107++; ch_117++; me_119++; bb_101++; nss++; }
+    if (value == "4") { ma_105++; ma_106++; ph_108++; ch_107++; ch_117++; me_119++; bb_101++; nss++; }
+
+    for (i = 0; i < f.grocery.length; i++) if (f.grocery[i].checked) {value = f.grocery[i].value; count++;}
+    if (value == "1") { ma_105++; ma_108++; ch_107++; ph_107++; me_119++; bb_101++; nso++; ncc++; }
+    if (value == "2") { ma_105++; ma_108++; ch_107++; ph_107++; me_119++; bb_101++; nso++; ncc++; }
+    if (value == "3") { ma_106++; ph_107++; ph_108++; ch_105++; ch_117++; me_113++; cs_101++; nss++; }
+    if (value == "4") { ma_106++; ph_107++; ph_108++; ch_105++; ch_117++; me_113++; cs_101++; nss++; }
+
+    for (i = 0; i < f.colour.length; i++) if (f.colour[i].checked) {value = f.colour[i].value; count++;}
+    if (value == "1") { ma_105++; ma_108++; ph_108++; ch_105++; bb_101++; nso++; ncc++; }
+    if (value == "2") { ma_106++; ph_107++; ch_107++; ch_117++; ph_107++; me_113++; me_119++; cs_101++; nss++; }
+    if (value == "3") { ma_106++; ph_107++; ch_107++; ch_117++; ph_107++; me_113++; me_119++; cs_101++; nss++; }
+    if (value == "4") { ma_105++; ma_108++; ph_108++; ch_105++; bb_101++; nso++; ncc++; }
+
+    for (i = 0; i < f.enjoy.length; i++) if (f.enjoy[i].checked) {value = f.enjoy[i].value; count++;}
+    if (value == "1") { ma_105++; ma_108++; ph_107++; ph_108++; ch_107++; ph_107++; me_113++; nso++; nss++; }
+    if (value == "3") { ma_106++; ch_105++; ch_117++; me_119++; cs_101++; bb_101++; ncc++; }
+    if (value == "2") { ma_105++; ma_108++; ph_107++; ph_108++; ch_107++; ph_107++; me_113++; nso++; nss++;}
+    if (value == "4") { ma_106++; ch_105++; ch_117++; me_119++; cs_101++; bb_101++; ncc++; }
+
+    for (i = 0; i < f.wonders.length; i++) if (f.wonders[i].checked) {value = f.wonders[i].value; count++;}
+    if (value == "1") { ma_105++; ph_108++; ch_117++; ch_105++; me_113++; cs_101++; bb_101++; nso++; nss++; ncc++;  }
+    if (value == "3") { ma_105++; ph_108++; ch_117++; ch_105++; me_113++; cs_101++; bb_101++; nso++; nss++; ncc++;  }
+    if (value == "2") { ma_106++; ma_108++; ph_107++; ch_107++; ph_107++; me_119++;  }
+    if (value == "4") { ma_106++; ma_108++; ph_107++; ch_107++; ph_107++; me_119++; }
+
+    var out = "ma-105";
+    i = ma_105;
+    if (ch_107 > i) { out = "ch-107"; i = ch_107; }
+    if (ma_106 > i) { out = "ma-106"; i = ma_106; }
+    if (ph_107 > i) { out = "ph-107"; i = ph_107; }
+    if (ma_108 > i) { out = "ma-108"; i = ma_108; }
+    if (ncc > i) { out = "ncc"; i = ncc; }
+    if (ph_107 > i) { out = "ph-107"; i = ph_107; }
+    if (me_119 > i) { out = "me-119"; i = me_119; }
+    if (ch_117 > i) { out = "ch-117"; i = ch_117; }
+    if (ch_105 > i) { out = "ch-105"; i = ch_105; }
+    if (me_113 > i) { out = "me-113"; i = me_113; }
+    if (ph_108 > i) { out = "ph-108"; i = ph_108; }
+    if (cs_101 > i) { out = "cs-101"; i = cs_101; }
+    if (bb_101 > i) { out = "bb-101"; i = bb_101; }
+    if (nso > i) { out = "nso"; i = nso; }
+    if (nss > i) { out = "nss"; i = nss; }
+
+    if (count == 5) location.href = out;
+    else location.href = "error";
+}
+function err(msg, url, line)
+{
+        location.href = "error";
+}
+//window.onerror = err;
+// -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<h1>The Freshie Course Test</h1>
+Which first year common course are you?
+<HR>
+
+<FORM NAME="f">
+<table border=0 cellpadding=6 cellspacing=0>
+<tr><td colspan=2 class="question">You are lost in a forest.  What do you do?</td></tr>
+<tr><td>
+    <INPUT TYPE="radio" NAME="forest" VALUE="1"> Navigate your way to safety using the sun as a compass.<BR>
+    <INPUT TYPE="radio" NAME="forest" VALUE="2"> Keep wandering -- you'll find your way out eventually!<BR>
+</td><td>
+    <INPUT TYPE="radio" NAME="forest" VALUE="3"> Sit and wait for a search party to find you.<BR>
+    <INPUT TYPE="radio" NAME="forest" VALUE="4"> I'm not lost in a forest, I'm sitting at my computer.<BR>
+</td></tr>
+<tr><td colspan=2 class="question">At the grocery store, do you:</td></tr>
+<tr><td>
+    <INPUT TYPE="radio" NAME="grocery" VALUE="1"> have a carefully established route and routine?<BR>
+    <INPUT TYPE="radio" NAME="grocery" VALUE="2"> stop frequently to compare for bargain and value?<BR>
+</td><td>
+    <INPUT TYPE="radio" NAME="grocery" VALUE="3"> try to get in and get out as quickly as possible?<BR>
+    <INPUT TYPE="radio" NAME="grocery" VALUE="4"> grouse loudly about the packs of ten hot dogs and eight buns?<BR>
+</td></tr>
+<tr><td colspan=2 class="question">What sort of colours do you prefer?</td></tr>
+<tr><td>
+    <INPUT TYPE="radio" NAME="colour" VALUE="1"> Bright colours.<BR>
+    <INPUT TYPE="radio" NAME="colour" VALUE="2"> Pastel shades.<BR>
+</td><td>
+    <INPUT TYPE="radio" NAME="colour" VALUE="3"> Muted earthy tones.<BR>
+    <INPUT TYPE="radio" NAME="colour" VALUE="4"> Black and white.<BR>
+</td></tr>
+
+
+<tr><td colspan=2 class="question">Which of the following historic sites would you most like to visit?
+</td></tr>
+<tr><td>
+    <INPUT TYPE="radio" NAME="wonders" VALUE="1">The Great Pyramid of Giza<BR>
+    <INPUT TYPE="radio" NAME="wonders" VALUE="2">The Taj Mahal<BR>
+</td><td>
+    <INPUT TYPE="radio" NAME="wonders" VALUE="3">Stonehenge<BR>
+    <INPUT TYPE="radio" NAME="wonders" VALUE="4">The Alhambra<BR>
+</td></tr>
+
+
+<tr><td colspan=2 class="question">In my morning newspaper, I always take a look at:</td></tr>
+<tr><td>
+    <INPUT TYPE="radio" NAME="enjoy" VALUE="1">The crossword<BR>
+    <INPUT TYPE="radio" NAME="enjoy" VALUE="2">The comics<BR>
+</td><td>
+    <INPUT TYPE="radio" NAME="enjoy" VALUE="3">The bridge column<BR>
+    <INPUT TYPE="radio" NAME="enjoy" VALUE="4">The chess column<BR>
+</td></tr>
+<!-- <tr><td colspan=2 class="button"><INPUT TYPE="button" VALUE="What Springer graduate text am I?" onClick="process();"></td></tr> -->
+<!-- <tr><td colspan=2 class="button"> -->
+</table>
+<HR>
+<div class="text-center">
+<a href = "/" onclick="process(); return false;"><button class="button">Which course am I?</button></a>
+</div>
+</FORM>
+
+<HR>
+</BODY> </HTML>

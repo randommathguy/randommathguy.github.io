@@ -12,7 +12,7 @@ description: Click on the links to explore!
 # *** If you're not sure what this mean, then leave this section as it is. Only modify the url and baseurl if you know what you're doing!***
 
 # url is the the website domain URL without a trailing slash
-# url: "https://example.com"
+#url: "https://example.com"
 
 # baseurl should be an empty string
 #baseurl: ""
@@ -125,13 +125,13 @@ author:
 social-network-links:
   rss: true
   email: "aryamanmaithani@gmail.com"
-  facebook: aryaman.maithani
+  # facebook: aryaman.maithani
   github: aryamanmaithani
+  stackexchange: "427810/aryaman-maithani"
 #  twitter: daattali
 #  reddit: yourname
-  linkedin: aryaman-maithani
+#  linkedin: aryaman-maithani
 #  xing: yourname
-#  stackoverflow: "427810/aryaman-maithani"
 #  snapchat: 
 #  instagram: 
 #  youtube: 
@@ -314,3 +314,7 @@ collections:
     output: true
   presentations: 
     output: true
+
+anon-form: "https://forms.gle/faFYkmjNnevF5nBK9"
+plugins:
+  - jekyll-target-blank

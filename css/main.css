@@ -22,6 +22,7 @@ layout: null
     --blockquote-color: #808080;
     --blockquote-bg-color: #404040;
     --blockquote-border-color: #fff;
+    --sidebar-line-color: {{ site.light-page-col }};
 }
 
 /*dark is used because I ripped this off, these following setting are for LIGHT mode*/
@@ -41,6 +42,7 @@ layout: null
     --blockquote-color: #7F7F7F; 
     --blockquote-bg-color: #BFBFBF;
     --blockquote-border-color: #000;
+    --sidebar-line-color: {{ site.page-col }};
 }
 
 
@@ -785,7 +787,7 @@ A.blog-button:active {text-decoration: none; color: white;}
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
-  /*border-bottom: 1px solid #111;*/
+  padding-left: 2rem;
 }
 .masthead-title {
   margin-top: 0;
@@ -967,7 +969,7 @@ a.sidebar-nav-item:focus {
 .sidebar-toggle {
   position: absolute;
   top:  .8rem;
-  left: 1rem;
+  left: 2.5rem;
   display: block;
   padding: .28rem .75rem;
   color: white;
@@ -978,13 +980,13 @@ a.sidebar-nav-item:focus {
 
 .sidebar-toggle:before {
   display: inline-block;
-  width: 1rem;
+  width: 2rem;
   height: 1.5rem;
   content: "";
-  background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, var(--background-color) 20%, var(--background-color) 40%, #555 40%, #555 60%, var(--background-color) 60%, var(--background-color) 80%, #555 80%, #555 100%);
-  background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, var(--background-color) 20%, var(--background-color) 40%, #555 40%, #555 60%, var(--background-color) 60%, var(--background-color) 80%, #555 80%, #555 100%);
-  background-image:     -ms-linear-gradient(to bottom, #555, #555 20%, var(--background-color) 20%, var(--background-color) 40%, #555 40%, #555 60%, var(--background-color) 60%, var(--background-color) 80%, #555 80%, #555 100%);
-  background-image:         linear-gradient(to bottom, #555, #555 20%, var(--background-color) 20%, var(--background-color) 40%, #555 40%, #555 60%, var(--background-color) 60%, var(--background-color) 80%, #555 80%, #555 100%);
+  background-image: -webkit-linear-gradient(to bottom, var(--sidebar-line-color), var(--sidebar-line-color) 20%, var(--background-color) 20%, var(--background-color) 40%, var(--sidebar-line-color) 40%, var(--sidebar-line-color) 60%, var(--background-color) 60%, var(--background-color) 80%, var(--sidebar-line-color) 80%, var(--sidebar-line-color) 100%);
+  background-image:    -moz-linear-gradient(to bottom, var(--sidebar-line-color), var(--sidebar-line-color) 20%, var(--background-color) 20%, var(--background-color) 40%, var(--sidebar-line-color) 40%, var(--sidebar-line-color) 60%, var(--background-color) 60%, var(--background-color) 80%, var(--sidebar-line-color) 80%, var(--sidebar-line-color) 100%);
+  background-image:     -ms-linear-gradient(to bottom, var(--sidebar-line-color), var(--sidebar-line-color) 20%, var(--background-color) 20%, var(--background-color) 40%, var(--sidebar-line-color) 40%, var(--sidebar-line-color) 60%, var(--background-color) 60%, var(--background-color) 80%, var(--sidebar-line-color) 80%, var(--sidebar-line-color) 100%);
+  background-image:         linear-gradient(to bottom, var(--sidebar-line-color), var(--sidebar-line-color) 20%, var(--background-color) 20%, var(--background-color) 40%, var(--sidebar-line-color) 40%, var(--sidebar-line-color) 60%, var(--background-color) 60%, var(--background-color) 80%, var(--sidebar-line-color) 80%, var(--sidebar-line-color) 100%);
 }
 
 .sidebar-toggle:active,
@@ -1001,10 +1003,10 @@ a.sidebar-nav-item:focus {
   /*background-image:    -moz-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);*/
   /*background-image:     -ms-linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);*/
   /*background-image:         linear-gradient(to bottom, #fff, #fff 20%, #555 20%, #555 40%, #fff 40%, #fff 60%, #555 60%, #555 80%, #fff 80%, #fff 100%);*/
-  background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-  background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-  background-image:     -ms-linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
-  background-image:         linear-gradient(to bottom, #555, #555 20%, #fff 20%, #fff 40%, #555 40%, #555 60%, #fff 60%, #fff 80%, #555 80%, #555 100%);
+  background-image: -webkit-linear-gradient(to bottom, #555, #555 20%, #eee 20%, #eee 40%, #555 40%, #555 60%, #eee 60%, #eee 80%, #555 80%, #555 100%);
+  background-image:    -moz-linear-gradient(to bottom, #555, #555 20%, #eee 20%, #eee 40%, #555 40%, #555 60%, #eee 60%, #eee 80%, #555 80%, #555 100%);
+  background-image:     -ms-linear-gradient(to bottom, #555, #555 20%, #eee 20%, #eee 40%, #555 40%, #555 60%, #eee 60%, #eee 80%, #555 80%, #555 100%);
+  background-image:         linear-gradient(to bottom, #555, #555 20%, #eee 20%, #eee 40%, #555 40%, #555 60%, #eee 60%, #eee 80%, #555 80%, #555 100%);
 }
 
 @media (min-width: 30.1em) {
@@ -1124,7 +1126,7 @@ Flyout
   display: flex;
   align-items: center;
   float: right;
-  margin-top: -60px;
+  margin-top: -65px;
   
   em {
     margin-left: 10px;

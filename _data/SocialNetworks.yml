@@ -41,10 +41,10 @@ xing:
   baseURL: "https://www.xing.com/profile/"
   icon: "fa-xing"
 
-stackoverflow:
-  name: "StackOverflow"
-  baseURL: "https://stackoverflow.com/users/"
-  icon: "fa-stack-overflow"
+stackexchange:
+  name: "StackExchange"
+  baseURL: "https://math.stackexchange.com/users/"
+  icon: "fa-stack-exchange"
 
 snapchat:
   name: "Snapchat"
